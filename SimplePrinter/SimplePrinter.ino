@@ -106,9 +106,9 @@ static void print(unsigned char* data, int len){
       float angleY = (SERVO_Y_END - atan(y2 / LENGTH_OF_BEAM_Y) / PI * 180.0f); 
       //int angleX = SERVO_X_START + (int)((1.0f *SERVO_X_END - SERVO_X_START)/ CANVAS_WIDTH) * x;
       //int angleY =  SERVO_Y_START + (int)((1.0f *SERVO_Y_END - SERVO_Y_START)/ CANVAS_HEIGHT) * y;
-      servoX.write_float(angleX);
+      servoX.write((int)angleX);
       //servoX.write(angleX);
-      servoY.write_float(angleY);
+      servoY.write((int)angleY);
       
       if(!pix){
         drawPixel();
